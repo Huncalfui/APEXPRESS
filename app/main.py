@@ -117,3 +117,5 @@ def kardex(material_sku: str, desde: Optional[str] = None, hasta: Optional[str] 
         with conn.cursor(row_factory=dict_row) as cur:
             cur.execute("\n".join(qry), params)
             return {"material": material_sku, "movimientos": cur.fetchall()}
+- name: Railway Deploy
+  uses: bervProject/railway-deploy@0.1.2-beta
